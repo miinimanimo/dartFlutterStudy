@@ -47,11 +47,16 @@ import 'package:dart_practice/dart_practice.dart' as dart_practice;
 // }
 
 // late
-void main() {
-  late final String name;
-  //do something, go to api
-  // name = 'nico';
-  name = '';
-  print(name);
-  //api작업할때 많이 볼
-}
+// void main() {
+//   late final String name;
+//   //do something, go to api
+//   // name = 'nico';
+//   name = '';
+//   print(name);
+//   //api작업할때 많이 볼
+// }
+
+// //const
+// void main() {
+//   const max_allowed_price = 1000;
+// }
