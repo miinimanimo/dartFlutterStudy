@@ -1,5 +1,39 @@
 import 'package:dart_practice/dart_practice.dart' as dart_practice;
 
+// void main() {
+//   print('Hello, world!');
+// }
+
+// 변수 선언 두가지 방법
+// void main() {
+//   var name = '니꼬';
+//   String name2 = 'nico';
+//   print(name);
+//   print(name2);
+// }
+
+// 다이나믹
+// void main() {
+//   var name;
+//   //dynamic name;으로도 가능
+//   name = '니꼬';
+//   // name = 12;
+//   // name = true;
+//   if (name is String) {
+//     name.toUpperCase();
+//   }
+//   if (name is int) {
+//     name.plus(1);
+//   }
+// }
+
+//null safety
 void main() {
-  print('Hello, world!');
+  String? nico = 'nico';
+  nico = null;
+  if (nico != null) {
+    nico.isNotEmpty;
+  }
+  //nico?.isNotEmpty;
+  //위의 if문과 동일한 의미
 }
