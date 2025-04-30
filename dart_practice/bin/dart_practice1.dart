@@ -28,12 +28,30 @@ import 'package:dart_practice/dart_practice.dart' as dart_practice;
 // }
 
 //null safety
+// void main() {
+//   String? nico = 'nico';
+//   nico = null;
+//   if (nico != null) {
+//     nico.isNotEmpty;
+//   }
+//   //nico?.isNotEmpty;
+//   //위의 if문과 동일한 의미
+// }
+
+// final
+// void main() {
+//   // var name = 'nico';
+//   // name = 'las';
+//   final String name = 'nico';
+//   // 타입도 추가 가능
+// }
+
+// late
 void main() {
-  String? nico = 'nico';
-  nico = null;
-  if (nico != null) {
-    nico.isNotEmpty;
-  }
-  //nico?.isNotEmpty;
-  //위의 if문과 동일한 의미
+  late final String name;
+  //do something, go to api
+  // name = 'nico';
+  name = '';
+  print(name);
+  //api작업할때 많이 볼
 }
