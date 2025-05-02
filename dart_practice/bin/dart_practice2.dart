@@ -33,9 +33,21 @@
 // }
 
 //String interpolation
+// void main() {
+//   var name = 'nico';
+//   var age = 12;
+//   var greeting = 'Hello, my name is $name and I\'m ${age + 2}';
+//   print(greeting);
+// }
+
+//collection
 void main() {
-  var name = 'nico';
-  var age = 12;
-  var greeting = 'Hello, my name is $name and I\'m ${age + 2}';
-  print(greeting);
+  var oldFriends = ['nico', 'lynn'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFriends) '❤️ $friend',
+  ];
+  print(newFriends);
 }
