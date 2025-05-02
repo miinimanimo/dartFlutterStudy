@@ -41,13 +41,33 @@
 // }
 
 //collection
+// void main() {
+//   var oldFriends = ['nico', 'lynn'];
+//   var newFriends = [
+//     'lewis',
+//     'ralph',
+//     'darren',
+//     for (var friend in oldFriends) '❤️ $friend',
+//   ];
+//   print(newFriends);
+// }
+
+//map
 void main() {
-  var oldFriends = ['nico', 'lynn'];
-  var newFriends = [
-    'lewis',
-    'ralph',
-    'darren',
-    for (var friend in oldFriends) '❤️ $friend',
-  ];
-  print(newFriends);
+  // var player = {
+  //   'name': 'nico',
+  //   'xp': 1940,
+  //   'superpower': false,
+  // };
+  // print(player);
+  // Map<int, bool> player = {
+  //   1: true,
+  //   2: false,
+  //   3: true,
+  // };
+  // print(player);
+  Map<List<int>, bool> player = {
+    [1, 2, 3, 4, 5]: true,
+  };
+  print(player);
 }
