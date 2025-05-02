@@ -53,21 +53,28 @@
 // }
 
 //map
+// void main() {
+//   // var player = {
+//   //   'name': 'nico',
+//   //   'xp': 1940,
+//   //   'superpower': false,
+//   // };
+//   // print(player);
+//   // Map<int, bool> player = {
+//   //   1: true,
+//   //   2: false,
+//   //   3: true,
+//   // };
+//   // print(player);
+//   Map<List<int>, bool> player = {
+//     [1, 2, 3, 4, 5]: true,
+//   };
+//   print(player);
+// }
+
+//sets
 void main() {
-  // var player = {
-  //   'name': 'nico',
-  //   'xp': 1940,
-  //   'superpower': false,
-  // };
-  // print(player);
-  // Map<int, bool> player = {
-  //   1: true,
-  //   2: false,
-  //   3: true,
-  // };
-  // print(player);
-  Map<List<int>, bool> player = {
-    [1, 2, 3, 4, 5]: true,
-  };
-  print(player);
+  var numbers = {1, 2, 3, 4};
+  Set<int> numbers2 = {1, 2, 3, 4};
+  //set선언 두가지 방법
 }
