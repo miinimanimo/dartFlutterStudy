@@ -120,11 +120,42 @@
 //   print(sayHello(name: 'nico', age: 12, country: 'cuba'));
 // }
 
-// optional positional parameters
-String sayHello(String name, int age, [String? country = 'wakanda']) =>
-    'Hello $name, you ar $age years old from $country';
+// // optional positional parameters
+// String sayHello(String name, int age, [String? country = 'wakanda']) =>
+//     'Hello $name, you ar $age years old from $country';
 
+// void main() {
+//   var results = sayHello('nico', 12);
+//   print(results);
+// }
+
+//operators
+// //두번째 방법
+// // String capitalizeName(String? name) => name != null ? name.toUpperCase() : 'ANON';
+
+// //세번째 방법
+// String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
+// //null 값은??
+
+// // //첫번째로 긴 방법
+// // String capitalizeName(String? name) {
+// //   if (name != null) {
+// //     return name.toUpperCase();
+// //   }
+// //   return 'ANON';
+// // }
+
+// void main() {
+//   capitalizeName('nico');
+//   capitalizeName(null);
+// }
+
+//QQ equals
 void main() {
-  var results = sayHello('nico', 12);
-  print(results);
+  String? name;
+  name ??= 'nico';
+  name = null;
+  name ??= 'another';
+  print(name);
 }
