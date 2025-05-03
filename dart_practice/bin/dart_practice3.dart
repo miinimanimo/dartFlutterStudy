@@ -70,26 +70,41 @@
 // }
 
 //named constructor
-class Player {
-  final String name;
-  int xp, age;
-  String team;
+// class Player {
+//   final String name;
+//   int xp, age;
+//   String team;
 
-  Player({
-    required this.name,
-    required this.xp,
-    required this.team,
-    required this.age,
-  });
+//   Player({
+//     required this.name,
+//     required this.xp,
+//     required this.team,
+//     required this.age,
+//   });
 
-  void sayHello() {
-    print('Hi my name is $name');
-  }
-}
+//   Player.createBluePlayer({required String name, required int age})
+//     : this.age = age,
+//       this.name = name,
+//       this.team = 'blue',
+//       this.xp = 0;
 
-void main() {
-  var player = Player(name: "nico", xp: 1500, team: "red", age: 20);
-  player.sayHello();
-  var player2 = Player(name: "lynn", xp: 1200, team: "blue", age: 21);
-  player2.sayHello();
-}
+//   Player.createRedPlayer(String name, int age)
+//     : this.age = age,
+//       this.name = name,
+//       this.team = 'red',
+//       this.xp = 0;
+
+//   void sayHello() {
+//     print('Hi my name is $name');
+//   }
+// }
+
+// void main() {
+//   //named
+//   var player = Player.createBluePlayer(name: "nico", age: 20);
+//   //positional
+//   var redplayer = Player.createRedPlayer("lynn", 21);
+// }
+
+
+//
