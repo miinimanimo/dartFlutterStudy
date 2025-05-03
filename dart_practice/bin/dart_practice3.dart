@@ -158,41 +158,70 @@
 // }
 
 // abstract classes
-abstract class Human {
-  void walk();
+// abstract class Human {
+//   void walk();
+// }
+
+// enum Team { red, blue }
+
+// enum XPLevel { begginer, medium, pro }
+
+// class Player extends Human {
+//   String name;
+//   XPLevel xp;
+//   Team team;
+
+//   Player({required this.name, required this.xp, required this.team});
+
+//   void walk() {
+//     print('im walk');
+//   }
+
+//   void sayHello() {
+//     print('Hi my name is $name');
+//   }
+// }
+
+// class Coach extends Human {
+//   void walk() {
+//     print('the coach is walking');
+//   }
+// }
+
+// void main() {
+//   var nico =
+//       Player(name: "nico", xp: XPLevel.medium, team: Team.red)
+//         ..name = 'las'
+//         ..xp = XPLevel.begginer
+//         ..team = Team.blue
+//         ..sayHello();
+// }
+
+// inheritance
+class Human {
+  final String name;
+  Human({required this.name});
+  void sayHello() {
+    print('hello my name is $name');
+  }
 }
 
 enum Team { red, blue }
 
-enum XPLevel { begginer, medium, pro }
-
 class Player extends Human {
-  String name;
-  XPLevel xp;
-  Team team;
+  final Team team;
 
-  Player({required this.name, required this.xp, required this.team});
+  Player({required this.team, required String name}) : super(name: name);
 
-  void walk() {
-    print('im walk');
-  }
-
+  @override
   void sayHello() {
-    print('Hi my name is $name');
-  }
-}
-
-class Coach extends Human {
-  void walk() {
-    print('the coach is walking');
+    // 부모 클래스의 것 먼저 호출
+    super.sayHello();
+    print('and I play for ${team}');
   }
 }
 
 void main() {
-  var nico =
-      Player(name: "nico", xp: XPLevel.medium, team: Team.red)
-        ..name = 'las'
-        ..xp = XPLevel.begginer
-        ..team = Team.blue
-        ..sayHello();
+  var player = Player(team: Team.red, name: "nico");
+  player.sayHello();
 }
