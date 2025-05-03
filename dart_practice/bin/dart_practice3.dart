@@ -197,31 +197,63 @@
 //         ..sayHello();
 // }
 
-// inheritance
-class Human {
-  final String name;
-  Human({required this.name});
-  void sayHello() {
-    print('hello my name is $name');
+// // inheritance
+// class Human {
+//   final String name;
+//   Human({required this.name});
+//   void sayHello() {
+//     print('hello my name is $name');
+//   }
+// }
+
+// enum Team { red, blue }
+
+// class Player extends Human {
+//   final Team team;
+
+//   Player({required this.team, required String name}) : super(name: name);
+
+//   @override
+//   void sayHello() {
+//     // 부모 클래스의 것 먼저 호출
+//     super.sayHello();
+//     print('and I play for ${team}');
+//   }
+// }
+
+// void main() {
+//   var player = Player(team: Team.red, name: "nico");
+//   player.sayHello();
+// }
+
+//mixins
+class Strong {
+  final double strenghtLevel = 1500.99;
+}
+
+class QuickRunner {
+  void runQuick() {
+    print("runnnnnnnnnnnnnn!");
   }
+}
+
+class Tall {
+  final double height = 1.99;
 }
 
 enum Team { red, blue }
 
-class Player extends Human {
+class Player with Strong, QuickRunner, Tall {
   final Team team;
 
-  Player({required this.team, required String name}) : super(name: name);
-
-  @override
-  void sayHello() {
-    // 부모 클래스의 것 먼저 호출
-    super.sayHello();
-    print('and I play for ${team}');
-  }
+  Player({required this.team});
 }
 
+class Horse with Strong, QuickRunner {}
+
+class Kid with QuickRunner {}
+
 void main() {
-  var player = Player(team: Team.red, name: "nico");
-  player.sayHello();
+  var player = Player(team: Team.red);
+  player.runQuick();
 }
