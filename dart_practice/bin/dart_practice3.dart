@@ -227,17 +227,33 @@
 // }
 
 //mixins
-class Strong {
-  final double strenghtLevel = 1500.99;
-}
+// 옛날 버전의 다트
+// class Strong {
+//   final double strenghtLevel = 1500.99;
+// }
 
-class QuickRunner {
+// class QuickRunner {
+//   void runQuick() {
+//     print("runnnnnnnnnnnnnn!");
+//   }
+// }
+
+// class Tall {
+//   final double height = 1.99;
+// }
+
+//지금 버전
+mixin QuickRunner {
   void runQuick() {
     print("runnnnnnnnnnnnnn!");
   }
 }
 
-class Tall {
+mixin Strong {
+  final double strenghtLevel = 1500.99;
+}
+
+mixin Tall {
   final double height = 1.99;
 }
 
