@@ -96,26 +96,35 @@
 //   print(sayHello('nico'));
 // }
 
-//named parameters
+// //named parameters
 
-//default value 지정
-// String sayHello({String name = 'anon', int age = 99, String country = 'wakanda'}) {
+// //default value 지정
+// // String sayHello({String name = 'anon', int age = 99, String country = 'wakanda'}) {
+// //   return "Hello $name, you are $age, and you come from $country";
+// // }
+
+// //default value를 지정하고 싶지 않다면 required 사용
+// String sayHello({
+//   required String name,
+//   required int age,
+//   required String country,
+// }) {
 //   return "Hello $name, you are $age, and you come from $country";
 // }
 
-//default value를 지정하고 싶지 않다면 required 사용
-String sayHello({
-  required String name,
-  required int age,
-  required String country,
-}) {
-  return "Hello $name, you are $age, and you come from $country";
-}
-
+// // void main() {
+// //   print(sayHello('nico', 19, 'couba'));
+// // }
+// //위는 별로 좋은 방법이 아님 -> named parameters 사용
 // void main() {
-//   print(sayHello('nico', 19, 'couba'));
+//   print(sayHello(name: 'nico', age: 12, country: 'cuba'));
 // }
-//위는 별로 좋은 방법이 아님 -> named parameters 사용
+
+// optional positional parameters
+String sayHello(String name, int age, [String? country = 'wakanda']) =>
+    'Hello $name, you ar $age years old from $country';
+
 void main() {
-  print(sayHello(name: 'nico', age: 12, country: 'cuba'));
+  var results = sayHello('nico', 12);
+  print(results);
 }
