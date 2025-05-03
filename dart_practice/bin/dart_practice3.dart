@@ -106,5 +106,53 @@
 //   var redplayer = Player.createRedPlayer("lynn", 21);
 // }
 
+//cascade notation
+// class Player {
+//   String name;
+//   int xp;
+//   String team;
 
-//
+//   Player({required this.name, required this.xp, required this.team});
+
+//   void sayHello() {
+//     print('Hi my name is $name');
+//   }
+// }
+
+// void main() {
+//   var nico = Player(name: "nico", xp: 1500, team: "red")
+//   // nico.name = 'las';
+//   // nico.xp = 1000;
+//   // nico.team = 'blue';
+//   // 위에보다 훨씬 간편하게 작성 가능 . <- nico를 뜻함
+//   ..name = 'las'
+//   ..xp = 1000
+//   ..team = 'blue'
+//   ..sayHello();
+// }
+
+//Enums
+enum Team { red, blue }
+
+enum XPLevel { begginer, medium, pro }
+
+class Player {
+  String name;
+  XPLevel xp;
+  Team team;
+
+  Player({required this.name, required this.xp, required this.team});
+
+  void sayHello() {
+    print('Hi my name is $name');
+  }
+}
+
+void main() {
+  var nico =
+      Player(name: "nico", xp: XPLevel.medium, team: Team.red)
+        ..name = 'las'
+        ..xp = XPLevel.begginer
+        ..team = Team.blue
+        ..sayHello();
+}
