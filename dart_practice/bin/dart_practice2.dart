@@ -160,24 +160,24 @@
 //   print(name);
 // }
 
-//typedef
-// typedef ListOfInts = List<int>;
+// //typedef
+// // typedef ListOfInts = List<int>;
 
-// ListOfInts revrseListOfNumbers(ListOfInts list) {
-//   var reversed = list.reversed;
-//   return reversed.toList();
+// // ListOfInts revrseListOfNumbers(ListOfInts list) {
+// //   var reversed = list.reversed;
+// //   return reversed.toList();
+// // }
+
+// // void main() {
+// //   print(revrseListOfNumbers([1, 2, 3]));
+// // }
+
+// typedef UserInfo = Map<String, String>;
+
+// String sayHi(UserInfo userInfo) {
+//   return "Hi ${userInfo['name']}";
 // }
 
 // void main() {
-//   print(revrseListOfNumbers([1, 2, 3]));
+//   sayHi({"ssss": 'nico'});
 // }
-
-typedef UserInfo = Map<String, String>;
-
-String sayHi(UserInfo userInfo) {
-  return "Hi ${userInfo['name']}";
-}
-
-void main() {
-  sayHi({"ssss": 'nico'});
-}
