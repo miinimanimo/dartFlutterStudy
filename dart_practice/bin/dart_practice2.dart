@@ -129,33 +129,55 @@
 //   print(results);
 // }
 
-//operators
-// //두번째 방법
-// // String capitalizeName(String? name) => name != null ? name.toUpperCase() : 'ANON';
+// //operators
+// // //두번째 방법
+// // // String capitalizeName(String? name) => name != null ? name.toUpperCase() : 'ANON';
 
-// //세번째 방법
-// String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+// // //세번째 방법
+// // String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
 
-// //null 값은??
+// // //null 값은??
 
-// // //첫번째로 긴 방법
-// // String capitalizeName(String? name) {
-// //   if (name != null) {
-// //     return name.toUpperCase();
-// //   }
-// //   return 'ANON';
+// // // //첫번째로 긴 방법
+// // // String capitalizeName(String? name) {
+// // //   if (name != null) {
+// // //     return name.toUpperCase();
+// // //   }
+// // //   return 'ANON';
+// // // }
+
+// // void main() {
+// //   capitalizeName('nico');
+// //   capitalizeName(null);
 // // }
 
+// //QQ equals
 // void main() {
-//   capitalizeName('nico');
-//   capitalizeName(null);
+//   String? name;
+//   name ??= 'nico';
+//   name = null;
+//   name ??= 'another';
+//   print(name);
 // }
 
-//QQ equals
+//typedef
+// typedef ListOfInts = List<int>;
+
+// ListOfInts revrseListOfNumbers(ListOfInts list) {
+//   var reversed = list.reversed;
+//   return reversed.toList();
+// }
+
+// void main() {
+//   print(revrseListOfNumbers([1, 2, 3]));
+// }
+
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+
 void main() {
-  String? name;
-  name ??= 'nico';
-  name = null;
-  name ??= 'another';
-  print(name);
+  sayHi({"ssss": 'nico'});
 }
