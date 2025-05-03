@@ -89,9 +89,33 @@
 // }
 
 //리턴이 한줄짜리라면 이렇게 fat arrow syntax 사용
-String sayHello(String name) => 'Hello $name nice to meet you!';
+// String sayHello(String name) => 'Hello $name nice to meet you!';
 
-num plus(num a, num b) => a + b;
+// num plus(num a, num b) => a + b;
+// void main() {
+//   print(sayHello('nico'));
+// }
+
+//named parameters
+
+//default value 지정
+// String sayHello({String name = 'anon', int age = 99, String country = 'wakanda'}) {
+//   return "Hello $name, you are $age, and you come from $country";
+// }
+
+//default value를 지정하고 싶지 않다면 required 사용
+String sayHello({
+  required String name,
+  required int age,
+  required String country,
+}) {
+  return "Hello $name, you are $age, and you come from $country";
+}
+
+// void main() {
+//   print(sayHello('nico', 19, 'couba'));
+// }
+//위는 별로 좋은 방법이 아님 -> named parameters 사용
 void main() {
-  print(sayHello('nico'));
+  print(sayHello(name: 'nico', age: 12, country: 'cuba'));
 }
