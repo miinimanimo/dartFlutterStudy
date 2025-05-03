@@ -72,9 +72,26 @@
 //   print(player);
 // }
 
-//sets
+// //sets
+// void main() {
+//   var numbers = {1, 2, 3, 4};
+//   Set<int> numbers2 = {1, 2, 3, 4};
+//   //set선언 두가지 방법
+// }
+
+//functions
+// void sayHello(String name) {
+//   print('Hello $name nice to meet you');
+// }
+
+// String sayHello(String name) {
+//   return 'Hello $name nice to meet you';
+// }
+
+//리턴이 한줄짜리라면 이렇게 fat arrow syntax 사용
+String sayHello(String name) => 'Hello $name nice to meet you!';
+
+num plus(num a, num b) => a + b;
 void main() {
-  var numbers = {1, 2, 3, 4};
-  Set<int> numbers2 = {1, 2, 3, 4};
-  //set선언 두가지 방법
+  print(sayHello('nico'));
 }
